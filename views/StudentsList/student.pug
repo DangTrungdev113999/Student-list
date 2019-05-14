@@ -1,0 +1,23 @@
+extends ../layouts/common
+
+block content
+  h1.text-center đây sẽ là danh sách cách sinh viên lớp C1807I
+
+  table.table.mt-5
+    tr.table.text-center
+      th ID
+      th Name
+      th Phone
+      th Email
+      th Active
+
+    each student in students
+      tr.text-center
+        td= student.idStudent
+        td= student.name
+        td= student.phoneNumber
+        td= student.email
+        td
+          a.btn.btn-light(href="/student/detail/" + student.id) detail
+          a.btn.btn-light(href="/student/update/" + student.id) update
+          a.btn.btn-light(href="/student/delete/" + student.id) delete

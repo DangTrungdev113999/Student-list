@@ -1,0 +1,26 @@
+html
+  head
+    meta(charset='UTF-8')
+    meta(name='viewport', c1ontent='width=divice-with, initial-scale=1')
+    title list of Students in C1807I
+    link(rel="stylesheet", href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css")
+    script(src="https://code.jquery.com/jquery-3.3.1.slim.min.js")
+    script(src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js")
+    script(src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js")
+  body
+    nav.navbar.navbar-expand-lg.navbar-light(style="background-color: #e3f2fd;")
+      a.navbar-brand(href='#')
+        img.d-inline-block.align-top(src='https://cdn.worldvectorlogo.com/logos/slack-1.svg', width='30', height='30', alt='') 
+        |       C1807I
+      button.navbar-toggler(type='button', data-toggle='collapse', data-target='#navbarNav', aria-controls='navbarNav', aria-expanded='false', aria-label='Toggle navigation')
+        span.navbar-toggler-icon
+      #navbarNav.collapse.navbar-collapse
+        ul.navbar-nav
+          li.nav-item
+            a.nav-link.active(href='/') Home
+          li.nav-item
+            a.nav-link(href='/student') Students
+
+    .container.pt-5
+      block content
+

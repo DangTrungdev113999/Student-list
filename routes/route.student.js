@@ -19,6 +19,6 @@ router.get('/detail/:idStudent', controller.detail);
 
 router.get('/update/:idStudent', controller.update);
 
-router.get('/delete/:idStudent', controller.delete);
+router.get('/delete/:id', controller.delete);
 
 module.exports = router;

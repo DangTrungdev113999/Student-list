@@ -28,6 +28,8 @@ module.exports.update = async function(req, res, next) {
 
 };
 
-module.exports.delete = async function(req, req, next) {
-
+module.exports.delete = async function(req, res, next) {
+	const id = req.params.id;
+	Student.remove({_id: id}).exec(function(err, result){});
+	res.redirect('/student');
 };

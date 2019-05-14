@@ -1,3 +1,38 @@
 extends ../layouts/common
 
 block content
+  h1 
+  span Create student
+  a.ml-2.btn.btn-info(href="/student") student
+
+  form(action="/student/create", method="POST", enctype="multipart/form-data")
+    .form-group
+      label(for="ID") ID
+      input#ID.form-control(type="text", name="idStudent", 
+      value= values ? values.idStudent : '')
+
+    .form-group
+      label(for="name") Name
+      input#name.form-control(type="text", name="name", 
+      value= values ? values.name : '')
+
+    .form-group
+      label(for="phone") Phone
+      input#phone.form-control(type="text", name="phoneNumber", 
+      value= values ? values.phoneNumber : '')
+    
+    .form-group
+      label(for="email") Email
+      input#email.form-control(type="text", name="email", 
+      value= values ? values.email : '')
+
+    .form-group
+      label(for="date") Date
+      input#date.form-control(type="text", name="brithOfDay", 
+      value= values ? values.brithOfDay : '')
+
+    .form-group
+      label(for="avatar") avatar
+      input#avatar.form-control-file(type="file", name="avatar")
+
+      button.btn.btn-primary.mt-2 Create

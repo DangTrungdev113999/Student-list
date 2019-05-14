@@ -6,10 +6,10 @@ var router = express.Router();
 
 router.get('/', controller.studentsList);
 
-router.get('/detail/:id', controller.detail);
+router.get('/detail/:idStudent', controller.detail);
 
-router.get('/update/:id', controller.update);
+router.get('/update/:idStudent', controller.update);
 
-router.get('/delete/:id', controller.delete);
+router.get('/delete/:idStudent', controller.delete);
 
 module.exports = router

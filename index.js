@@ -1,6 +1,7 @@
 
 const express = require('express');
 const mongoose = require('mongoose');
+// const bodyParser = require('bodyParser');
 
 
 mongoose.connect('mongodb://localhost/students-List', {useNewUrlParser: true})
@@ -14,6 +15,8 @@ const port = 3000;
 app.set('view engine', 'pug');
 app.set('views', './views');
 
+// app.use(bodyParser.json()); // không hỗ trợ mutilpart/form-data
+// app.use(bodyParser.urlencoded({ extended: true})); // for parsing application/x-www-form-urlencoded
 
 app.get('/', function (req, res) {
   // res.send('Hello World');

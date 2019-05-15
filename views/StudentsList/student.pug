@@ -3,6 +3,11 @@ extends ../layouts/common
 block content
   h1.text-center đây sẽ là danh sách cách sinh viên lớp C1807I
 
+  .d-flex.align-items-center.mt-5
+    form.d-flex.ml-auto(action ="/student/search", method="GET")
+      input.form-control(type="text", name="search")
+      button(class= "btn btn-primary ml-2") Search  
+
   table.table.mt-5
     tr.table.text-center
       th ID

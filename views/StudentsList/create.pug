@@ -18,17 +18,17 @@ block content
 
     .form-group
       label(for="phone") Phone
-      input#phone.form-control(type="text", name="phoneNumber", 
+      input#phone.form-control(type="number", name="phoneNumber", 
       value= values ? values.phoneNumber : '')
     
     .form-group
       label(for="email") Email
-      input#email.form-control(type="text", name="email", 
+      input#email.form-control(type="email", name="email", 
       value= values ? values.email : '')
 
     .form-group
       label(for="date") Date
-      input#date.form-control(type="text", name="brithOfDay", 
+      input#date.form-control(type="date", name="brithOfDay", 
       value= values ? values.brithOfDay : '')
 
     .form-group

@@ -8,8 +8,9 @@ const upload = multer({ dest: './public/uploads/' });
 
 router.get('/', controller.studentsList);
 
-router.get('/create', controller.createStudent);
+router.get('/search', controller.search);
 
+router.get('/create', controller.createStudent);
 router.post('/create',
 	upload.none(), 
 	controller.postStudentInfo
@@ -18,6 +19,9 @@ router.post('/create',
 router.get('/detail/:idStudent', controller.detail);
 
 router.get('/update/:idStudent', controller.update);
+router.post('/update/:idStudent', 
+	upload.none(),
+	controller.postUpdate);
 
 router.get('/delete/:id', controller.delete);
 

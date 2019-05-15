@@ -1,3 +1,38 @@
 extends ../layouts/common
 
 block content
+  h1.text-center 
+    span Update student Info
+
+  form(action="", method="POST", enctype="multipart/form-data")
+    .form-group
+      label(for="ID") ID
+      input#ID.form-control(type="text", name="idStudent", 
+      value=values.idStudent )
+
+    .form-group
+      label(for="name") Name
+      input#name.form-control(type="text", name="name", 
+      value=values.name )
+
+    .form-group
+      label(for="phone") Phone
+      input#phone.form-control(type="number", name="phoneNumber", 
+      value=values.phoneNumber)
+    
+    .form-group
+      label(for="email") Email
+      input#email.form-control(type="email", name="email", 
+      value=values.email)
+
+    .form-group
+      label(for="date") Date
+      input#date.form-control(type="date", name="brithOfDay", 
+      value=values.brithOfDay)
+
+    .form-group
+      label(for="avatar") avatar
+      input#avatar.form-control-file(type="file", name="avatar")
+    .form-group
+      button.btn.btn-primary.mt-2 update
+      a.btn.btn-primary.ml-5.mt-2(href='/student') Cancel

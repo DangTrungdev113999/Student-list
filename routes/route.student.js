@@ -1,6 +1,8 @@
 const express = require('express');
 var multer  = require('multer'); // mã hoá 
 
+const validate = require('../controllers/validate.controller.js');
+
 const controller = require('../controllers/student.controller.js');
 
 const router = express.Router();
@@ -10,9 +12,10 @@ router.get('/', controller.studentsList);
 
 router.get('/search', controller.search);
 
-router.get('/create', controller.createStudent);
+router.get('/create',  controller.createStudent);
 router.post('/create',
 	upload.none(), 
+	validate.validate,
 	controller.postStudentInfo
 	);
 

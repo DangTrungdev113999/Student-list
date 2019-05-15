@@ -2,8 +2,13 @@ extends ../layouts/common
 
 block content
   h1 
-  span Create student
-  a.ml-2.btn.btn-info(href="/student") student
+    span Create student
+      a.ml-2.btn.btn-info(href="/student") student
+      
+  if errors
+    each error in errors
+      .alert.alert-danger= error
+
 
   form(action="/student/create", method="POST", enctype="multipart/form-data")
     .form-group

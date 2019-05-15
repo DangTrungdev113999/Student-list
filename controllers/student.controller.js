@@ -11,6 +11,11 @@ module.exports.createStudent = async (req, res, next) => {
 	res.render('StudentsList/create');
 };
 
+module.exports.postStudentInfo = async (req, res, next) => {
+	Student.create(req.body);
+	res.redirect('/student');
+};
+
 module.exports.search = async (req, res, next) => {
 	const students = await Student.find();
 	const q = req.query.search;
@@ -21,11 +26,6 @@ module.exports.search = async (req, res, next) => {
 	res.render('StudentsList/student', {
 		students: machedStudents
 	})
-}
-
-module.exports.postStudentInfo = async (req, res, next) => {
-	Student.create(req.body);
-	res.redirect('/student');
 };
 
 module.exports.detail = async (req, res, next) => {

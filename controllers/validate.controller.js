@@ -1,4 +1,4 @@
-module.exports.validate = (req, res, next) => {
+module.exports.create = (req, res, next) => {
 	const errors = [];
 
 	if (!req.body.idStudent) {

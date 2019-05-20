@@ -1,5 +1,6 @@
 const Student = require('../models/student.model.js');
 
+
 module.exports.studentsList = async (req, res, next) => {
 	const students = await Student.find();
 	res.render('StudentsList/student', {

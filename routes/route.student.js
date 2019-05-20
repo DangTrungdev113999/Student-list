@@ -15,7 +15,7 @@ router.get('/search', controller.search);
 router.get('/create',  controller.createStudent);
 router.post('/create',
 	upload.none(), 
-	validate.validate,
+	validate.create,
 	controller.postStudentInfo
 	);
 
